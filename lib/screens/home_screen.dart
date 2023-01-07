@@ -1,4 +1,6 @@
+import 'package:booking_ticket/screens/ticket_view.dart';
 import 'package:booking_ticket/utils/app_styles.dart';
+import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -14,6 +16,7 @@ class HomeScreen extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Column(
               children: [
+                const Padding(padding: EdgeInsets.only(top: 40)),
                 Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -38,10 +41,54 @@ class HomeScreen extends StatelessWidget {
                               image: AssetImage('assets/images/img1.jpg'),
                             )),
                       )
-                    ])
+                    ]),
+                const SizedBox(
+                  height: 25,
+                ),
+                Container(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+                  decoration: BoxDecoration(
+                    color: const Color(0xFFF4F6FD),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: Row(
+                    children: [
+                      const Icon(
+                        FluentSystemIcons.ic_fluent_search_filled,
+                        color: Color(0xFFBFC205),
+                      ),
+                      Text(
+                        'Search',
+                        style: Styles.headLineStyle4,
+                      ),
+                    ],
+                  ),
+                ),
+                Container(
+                  margin: const EdgeInsets.only(top: 40),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        'Upcoming Flights',
+                        style: Styles.headLineStyle2,
+                      ),
+                      InkWell(
+                        onTap: () {},
+                        child: Text(
+                          'View all',
+                          style: Styles.textStyle
+                              .copyWith(color: Styles.primaryColor),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
               ],
             ),
-          )
+          ),
+          const Ticket()
         ],
       ),
     );
