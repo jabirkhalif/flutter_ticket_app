@@ -1,16 +1,13 @@
-# booking_ticket
+#  ticket booking app
 
-A new Flutter project.
+Flutter project that builds the UI for a ticketing app 
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+This project is not connected to a backend and is completely just the UI.
 
 A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+This is my first time trying out flutter and have reaslly loved it. 
+The app design has been inspired by design available in dribbble. 
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
