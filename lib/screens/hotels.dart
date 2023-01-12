@@ -9,11 +9,10 @@ class Hotels extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print('the hotels are ${hotels['place']}');
     final size = AppLayout.getSize(context);
     return Container(
         width: size.width * 0.6,
-        height: 350,
+        height: AppLayout.getScreenHeight(350),
         padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 17),
         margin: const EdgeInsets.only(right: 17, top: 5),
         decoration: BoxDecoration(
@@ -28,7 +27,7 @@ class Hotels extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
-              height: 180,
+              height: AppLayout.getScreenHeight(180),
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(12),
                   color: Styles.primaryColor,
@@ -36,16 +35,16 @@ class Hotels extends StatelessWidget {
                       fit: BoxFit.cover,
                       image: AssetImage("assets/images/${hotels['image']}"))),
             ),
-            const SizedBox(
-              height: 10,
+            SizedBox(
+              height: AppLayout.getScreenHeight(10),
             ),
             Text('${hotels['place']}',
                 style: Styles.headLineStyle2.copyWith(color: Styles.kakiColor)),
-            const SizedBox(height: 5),
+            SizedBox(height: AppLayout.getScreenHeight(5)),
             Text('${hotels['destination']}',
                 style: Styles.headLineStyle3.copyWith(color: Colors.white)),
-            const SizedBox(height: 8),
-            Text('\$${hotels['price']}',
+            SizedBox(height: AppLayout.getScreenHeight(8)),
+            Text('\$${hotels['price']}/night',
                 style: Styles.headLineStyle.copyWith(color: Styles.kakiColor)),
           ],
         ));
