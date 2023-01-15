@@ -1,6 +1,7 @@
 import 'package:booking_ticket/utils/app_layout.dart';
 import 'package:booking_ticket/utils/app_styles.dart';
 import 'package:booking_ticket/widgets/icon_text_widget.dart';
+import 'package:booking_ticket/widgets/info_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -104,6 +105,65 @@ class SearchScreen extends StatelessWidget {
                 style: Styles.textStyle.copyWith(color: Colors.white),
                 textAlign: TextAlign.center),
           ),
+          SizedBox(
+            height: AppLayout.getScreenHeight(10),
+          ),
+          const Info(text1: 'Upcoming Flights', text2: 'View all'),
+          SizedBox(
+            height: AppLayout.getScreenHeight(15),
+          ),
+          Row(
+            children: [
+              // ignore: avoid_unnecessary_containers
+              Container(
+                height: AppLayout.getScreenHeight(400),
+                padding: EdgeInsets.symmetric(
+                    horizontal: AppLayout.getScreenHeight(15),
+                    vertical: AppLayout.GetWidth(15)),
+                width: size.width * .43,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(
+                    AppLayout.getScreenHeight(20),
+                  ),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey.shade200,
+                      spreadRadius: 1,
+                      blurRadius: 1,
+                    ),
+                  ],
+                ),
+                child: Column(children: [
+                  Container(
+                      height: AppLayout.getScreenHeight(190),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(
+                          AppLayout.getScreenHeight(12),
+                        ),
+                        image: const DecorationImage(
+                          image: AssetImage('assets/images/img1.jpg'),
+                          fit: BoxFit.cover,
+                        ),
+                      )),
+                  SizedBox(height: AppLayout.getScreenHeight(12)),
+                  Text(
+                    "20% Discout on the early booking of this flight, DON'T miss OUT! this chance",
+                    style: Styles.headLineStyle2
+                        .copyWith(fontWeight: FontWeight.w500),
+                  )
+                ]),
+              ), 
+
+              Column(
+                children: [
+                  Container(
+                    
+                  )
+                ],
+              )
+            ],
+          )
         ],
       ),
     );
