@@ -1,3 +1,4 @@
+import 'package:booking_ticket/screens/search_screen.dart';
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
 
@@ -14,7 +15,7 @@ class _BottomState extends State<Bottom> {
   int _selectedIndex = 0;
   static final List<Widget> _widgetOptions = <Widget>[
     const HomeScreen(),
-    const Text('search'),
+    const SearchScreen(),
     const Text('tickets'),
     const Text('profile'),
   ];
