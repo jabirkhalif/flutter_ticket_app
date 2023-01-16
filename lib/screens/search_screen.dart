@@ -113,6 +113,7 @@ class SearchScreen extends StatelessWidget {
             height: AppLayout.getScreenHeight(15),
           ),
           Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               // ignore: avoid_unnecessary_containers
               Container(
@@ -153,13 +154,89 @@ class SearchScreen extends StatelessWidget {
                         .copyWith(fontWeight: FontWeight.w500),
                   )
                 ]),
-              ), 
+              ),
 
               Column(
                 children: [
+                  Stack(
+                    children: [
+                      Container(
+                          width: size.width * .44,
+                          padding: EdgeInsets.symmetric(
+                              horizontal: AppLayout.getScreenHeight(15),
+                              vertical: AppLayout.GetWidth(15)),
+                          height: AppLayout.getScreenHeight(174),
+                          decoration: BoxDecoration(
+                              color: const Color(0xFF3AB8B8),
+                              borderRadius: BorderRadius.circular(
+                                  AppLayout.getScreenHeight(18))),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "Discount\n for survey ",
+                                style: Styles.headLineStyle2.copyWith(
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white),
+                              ),
+                              SizedBox(height: AppLayout.getScreenHeight(10)),
+                              Text(
+                                "Take the survey about our services and get discount",
+                                style: Styles.headLineStyle2.copyWith(
+                                    fontWeight: FontWeight.w500,
+                                    color: Colors.white,
+                                    fontSize: 18),
+                              ),
+                            ],
+                          )),
+                      Positioned(
+                          right: -45,
+                          top: -40,
+                          child: Container(
+                            padding:
+                                EdgeInsets.all(AppLayout.getScreenHeight(30)),
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              border: Border.all(
+                                  color: const Color(0xFF189999), width: 18),
+                              color: Colors.transparent,
+                            ),
+                          ))
+                    ],
+                  ),
+                  SizedBox(height: AppLayout.getScreenHeight(15)),
                   Container(
-                    
-                  )
+                      padding: EdgeInsets.symmetric(
+                          horizontal: AppLayout.getScreenHeight(15),
+                          vertical: AppLayout.GetWidth(15)),
+                      width: size.width * .44,
+                      height: AppLayout.getScreenHeight(210),
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(
+                            AppLayout.getScreenHeight(18),
+                          ),
+                          color: const Color(0xFFEC6545)),
+                      child: Column(
+                        children: [
+                          Text(
+                            "Take love",
+                            style: Styles.headLineStyle2.copyWith(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold),
+                            textAlign: TextAlign.center,
+                          ),
+                          SizedBox(height: AppLayout.getScreenHeight(5)),
+                          RichText(
+                              text: const TextSpan(children: [
+                            TextSpan(
+                                text: '😍', style: TextStyle(fontSize: 30)),
+                            TextSpan(
+                                text: '🥰', style: TextStyle(fontSize: 40)),
+                            TextSpan(
+                                text: '😘', style: TextStyle(fontSize: 30)),
+                          ]))
+                        ],
+                      ))
                 ],
               )
             ],
